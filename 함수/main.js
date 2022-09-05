@@ -1,5 +1,124 @@
+/*
+const inputArr = [2, 4, 6, 8, 10];
 
-console.log()
+const reducefn = (acc, cur, idx, src) => {
+  console.log(`acc:${acc} / cur:${cur} /  idx:${idx} / src:${src}`);
+  return acc + cur;
+};
+
+const result = inputArr.reduce(reducefn, 0);
+console.log(result);
+*/
+
+/*
+const inputarr = [2, 4, 6, 8, 10];
+
+const sum = (arr) => {
+
+    let a = 0;
+
+    for(let i = 0; i < arr.length; i++) {
+
+        a += arr[i];
+
+    }
+    return a;
+}
+
+const result = 
+
+inputArr.reducr()
+*/
+
+/*
+const arr = [
+  "강석원",
+  "박종훈",
+  "이진우",
+  "윤승준",
+  "이슬비",
+  "이정운",
+  "이종석",
+  "이진우",
+  "장효택",
+  "최도원",
+  "최승준",
+];
+
+const filterfn = (value, index, arr) => {
+  console.log(`[{${index}}] ${value}`);
+};
+
+const filterResult = arr.filter(filterfn);
+console.log(filterResult);
+
+arr.push("홍길동", 1234);
+
+console.log(arr);
+*/
+
+/*
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const filterfn = (value, index, arr) => {
+  console.log(`[{${value}}] ${index}`);
+  if (value % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+const filterResult = arr.filter(filterfn);
+console.log(filterResult);
+*/
+
+/*
+const sunmoonfn = (value, index, arr) => {
+  console.log(`value:${value} / index:${index} / arr:${arr}`);
+};
+
+const sunmoonfn1 = (value, index) => {
+  console.log(`[${index}] ${index}`);
+};
+
+const forEachResult = arr.forEach(sunmoonfn);
+//const forEachResult = arr.forEach(sunmoonfn1);
+*/
+
+/*
+const sunmoonfn = (value, index, arr) => {
+  console.log(`[${index}] ${value}`);
+  return value * value;
+};
+
+const mapReslt = arr.map(sunmoonfn);
+console.log(mapReslt);
+*/
+
+//const mapResult = arr.map();
+//console.log(mapResult);
+
+/*
+const call3Times = (callback) => {
+  //  console.log(callback);
+  for (let i = 0; i < 3; i++) {
+    //console.log(typeof callback);
+    if (i === 2) {
+      callback(i);
+    }
+    callback(i);
+  }
+};
+
+const myPrint = (idx) => console.log(`${idx} 번째 함수 호출`);
+
+call3Times(function (idx) {
+  console.log(`${idx} 번째 함수 호출`);
+});
+*/
+
+//console.log()
 
 /*const myPrint = (...data) => {
 
@@ -19,9 +138,8 @@ console.log(data.join(","));
 
 myPrint("안녕", "하세요");
 */
-const strInput = "안녕,하세요,박종훈,입니다";
-console.log(strInput.split(","));
-
+//const strInput = "안녕,하세요,박종훈,입니다";
+//console.log(strInput.split(","));
 
 /*
 const min = (...items) => {
