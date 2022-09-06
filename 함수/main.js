@@ -1,238 +1,131 @@
 /*
-const inputArr = [2, 4, 6, 8, 10];
+const name = "망고";
+const proce = 10000;
 
-const reducefn = (acc, cur, idx, src) => {
-  console.log(`acc:${acc} / cur:${cur} /  idx:${idx} / src:${src}`);
-  return acc + cur;
+const product = {
+  제품명: "7D 건조망고",
+  유형: "당절임",
+  성분: "망고, 설탕, 치자황색소",
+  원산지: "필리핀",
+  const: "상수입니다",
+  javascript: "자바스크립트입니다.",
+  1234: 5678,
+  "제품 유형": "먹는거",
 };
 
-const result = inputArr.reduce(reducefn, 0);
-console.log(result);
+console.log(product);
+
+console.log(product.제품명);
+//console.log(product.["제품명"]);
+
+console.log(product.const);
+
+//console.log(product.1234);
+//console.log(product.[1234]);
+
+//console.log(product.제품 유형);
+//console.log(product.["제품 유형"]);
+*/
+
+const site = {
+  사이트명: "네이버",
+  url: "https://naver.com",
+};
+
+const product = {
+  상품번호: "7134572951",
+  상품상태: "신상품",
+  제조사: "삼성전자",
+  브랜드: "갤럭시",
+  모델명: "버즈2 프로 SM-R510",
+  원산지: "베트남산(삼성전자)",
+  제조일자: "2022.08.01",
+  옵션명: ["1개", "2개", "3개"],
+  중량: ["100g", "200g", "300g"],
+  판매처: site,
+  printBrand: function (myname) {
+    console.log(`${myname}이 선호하는 브랜드는 ${this.브랜드} 입니다.`);
+    console.log(this);
+  },
+  /*
+  printModel: (myname) => {
+    console.log(`${myname}이 선호하는 모델은 ${this.모델명} 입니다.`);
+    console.log(this);
+  },
+  */
+};
+
+const str = "         동해물과 백두산이 마르고 닳도록";
+console.log(str);
+console.log(str.split(" "));
+console.log(str.trim());
+console.log(str.trim().split(" "));
+
+/*
+const str = "hellow";
+console.log(str);
+str.indexOf();
+
+const str2 = new String("hellow");
+console.log(str2);
+str2.indexOf();
 */
 
 /*
-const inputarr = [2, 4, 6, 8, 10];
+const products = [product, product, product, product];
+console.log(products);
 
-const sum = (arr) => {
+const 내쇼핑몰 = {
+  제품들: products,
+};
 
-    let a = 0;
-
-    for(let i = 0; i < arr.length; i++) {
-
-        a += arr[i];
-
-    }
-    return a;
-}
-
-const result = 
-
-inputArr.reducr()
+console.log(내쇼핑몰);
 */
 
 /*
-const arr = [
-  "강석원",
-  "박종훈",
-  "이진우",
-  "윤승준",
-  "이슬비",
-  "이정운",
-  "이종석",
-  "이진우",
-  "장효택",
-  "최도원",
-  "최승준",
-];
+product.제조사 = "로지택";
+console.log(product);
 
-const filterfn = (value, index, arr) => {
-  console.log(`[{${index}}] ${value}`);
-};
-
-const filterResult = arr.filter(filterfn);
-console.log(filterResult);
-
-arr.push("홍길동", 1234);
-
-console.log(arr);
+product.옵션명.type = "수량";
+console.log(product.옵션명.type);
+console.log(product.옵션명);
 */
 
 /*
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-const filterfn = (value, index, arr) => {
-  console.log(`[{${value}}] ${index}`);
-  if (value % 2 === 0) {
-    return true;
-  } else {
-    return false;
-  }
+console.printf = function (str) {
+  console.log(`[INFO] ${str}`);
 };
 
-const filterResult = arr.filter(filterfn);
-console.log(filterResult);
+console.printf("내가 만든 출력 함수 1");
+console.printf("내가 만든 출력 함수 2");
+console.printf("내가 만든 출력 함수 3");
+console.printf("내가 만든 출력 함수 4");
+console.printf("내가 만든 출력 함수 5");
 */
 
 /*
-const sunmoonfn = (value, index, arr) => {
-  console.log(`value:${value} / index:${index} / arr:${arr}`);
-};
+product.고객센터 = "1555-5555";
+delete product.중량;
+console.log(product);
+/*
+console.log(typeof product);
+console.log(typeof console);
 
-const sunmoonfn1 = (value, index) => {
-  console.log(`[${index}] ${index}`);
-};
-
-const forEachResult = arr.forEach(sunmoonfn);
-//const forEachResult = arr.forEach(sunmoonfn1);
+console.myname = "rkdtjrdnjs";
+console.log(console.myname);
 */
 
 /*
-const sunmoonfn = (value, index, arr) => {
-  console.log(`[${index}] ${value}`);
-  return value * value;
-};
+const json = JSON.stringify(product.판매처, null, 2);
+console.log(json);
 
-const mapReslt = arr.map(sunmoonfn);
-console.log(mapReslt);
-*/
-
-//const mapResult = arr.map();
-//console.log(mapResult);
-
-/*
-const call3Times = (callback) => {
-  //  console.log(callback);
-  for (let i = 0; i < 3; i++) {
-    //console.log(typeof callback);
-    if (i === 2) {
-      callback(i);
-    }
-    callback(i);
-  }
-};
-
-const myPrint = (idx) => console.log(`${idx} 번째 함수 호출`);
-
-call3Times(function (idx) {
-  console.log(`${idx} 번째 함수 호출`);
-});
-*/
-
-//console.log()
-
-/*const myPrint = (...data) => {
-
-let result = " ";
-
-    console.log(data);
-
-    for(let i = 0; i < data.length; i++) {
-        result = result + data[i] + " ";
-    }
-
-    console.log(result);
-
-console.log(data.join(","));
-
-};
-
-myPrint("안녕", "하세요");
-*/
-//const strInput = "안녕,하세요,박종훈,입니다";
-//console.log(strInput.split(","));
-
-/*
-const min = (...items) => {
-
-    console.log(items);
-
-};
-console.log(min(10, 20, 30, 40));
-
-
-console.log("a", "b", "c");
+const obj = JSON.parse(json);
+console.log(obj);
 */
 
 /*
-const min = (arr) => {
-
-    let result = arr[0];
-
-    console.log(arr);
-    for(let i = 0; i < arr.length; i++) {
-        if (result > arr[i]) {
-            result = arr[i];
-        }
-    }
-        return result;
-};
-
-const input = [10, 5, 20, 100];
-console.log(min(input));
-*/
-
-/*const isLeapYear = (year) => 
-(year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
-
-console.log(`2020년은 윤년일까? === ${isLeapYear(2020)}`);
-console.log(`2010년은 윤년일까? === ${isLeapYear(2010)}`);
-console.log(`2000년은 윤년일까? === ${isLeapYear(2000)}`);
-console.log(`1900년은 윤년일까? === ${isLeapYear(1900)}`);
-
-*/
-
-/*function sum(a, b) {
-    return a + b;
-
-}
-console.log(sum(2, 5));
-
-const sum2 = function (a, b) {
-return a + b;
-
-};
-console.log(sum2(4, 6));
-
-const sum3 = (a, b) => a + b;
-console.log(sum3(1, 3));
-    
-const sum4 = (a, b) => a +b;
-console.log(sum4(1, 3));
-    
-//prompt("입력")
-let a = prompt("좋아하는 과일은?", "입력");
-console.log(a);
-
-let b = confirm("Y & N");
-console.log(b);
-
-let c = alert("?");
-console.log(c);
-*/
-
-/*
-let main2 = function () {
-
-    console.log("두번째 함수 입니다");
-
-}
-
-main2();
-*/
-/*
-main();
-main();
-
-console.log(typeof main);
-console.log(typeof 1234);
-console.log(typeof "1234");
-console.log(typeof [1, 2, 3, 4]);
-
-const obj = {a:1, b:2, c:3};
-console.log(typeof obj);
-console.log(typeof 123.23);
-
-console.log(main);
-console.log(console.log);
-
+console.log(product);
+console.log(product.판매처.사이트명);
+product.printBrand("강석원");
+product.printModel("강석원");
 */
