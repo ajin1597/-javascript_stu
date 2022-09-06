@@ -55,11 +55,17 @@ const product = {
   */
 };
 
+String.prototype.toPrint = function () {
+  console / log("[2022-09-06] " + this.valueOf());
+};
+
+/*
 const str = "         동해물과 백두산이 마르고 닳도록";
 console.log(str);
 console.log(str.split(" "));
 console.log(str.trim());
 console.log(str.trim().split(" "));
+*/
 
 /*
 const str = "hellow";

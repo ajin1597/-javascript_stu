@@ -1,0 +1,36 @@
+body {
+  background-color: black;
+}
+
+.sunmoon {
+  position: relative;
+  text-align: center;
+  width: 300px;
+  padding: 40px;
+  font-size: 35px;
+  color: #15f4ee;
+  font-family: poppins;
+  font-weight: 400;
+  border: 5px solid #15f4ee;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: 1.5s;
+}
+
+div {
+  /* font-size: x-large;
+  font-weight: 600; */
+  /* background-color: gray; */
+  /* color: rgb(225, 0, 0); */
+  /* color: #ff0000; */
+  /* border: 1px solid gray;
+  border-radius: 80px 20px 80px 20px;
+  margin: 10px 20px 30px 40px;
+  padding: 10px 20px 30px 40px;
+
+  width: 200px;
+  height: 100px;
+  display: inline-block; */
+}
