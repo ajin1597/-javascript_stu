@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <style>
+      .sunmoon {
+        color: red;
+      }
+      #sun {
+        color: red;
+      }
+      #moon {
+        color: aqua;
+      }
+      .SUN {
+        color: blue;
+      }
+      #container {
+        background-color: aqua;
+      }
+      #container span {
+        font-weight: bold;
+      }
+      #container #moon {
+        color: green;
+      }
+      #container .SUN {
+        border: 3px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sunmoon">DIV 태그 입니다.</div>
+    <div id="container">
+      <span name="first">안</span>
+      <span id="sun" name="second">녕</span>
+      <span id="moon">하</span>
+      <span class="SUN">세</span>
+      <span>요</span>
+    </div>
+    <script>
+      const sun = document.querySelector("#sun");
+      //sun.addEventListener();
+
+      let cl1 = 0;
+      let cl2 = 0;
+      let cl3 = 0;
+      let cl4 = 0;
+
+      document.addEventListener("click", () => {
+        console.log(`${cl1++} 클릭`);
+      });
+      document.addEventListener("dblclick", () => {
+        console.log(`${cl2++} 더블클릭`);
+      });
+      document.addEventListener("mousedown", () => {
+        console.log(`${cl3++} 누름`);
+      });
+      document.addEventListener("mouseup", () => {
+        console.log(`${cl4++} 땜`);
+      });
+
+      // const div = document.querySelector(".sunmoon");
+      // console.log(div);
+      // // const result1 = document.getElementById("moon"); //ID 지정
+      // // console.log(result.innerText);
+      // console.log(result1.textContent);
+      // const result2 = document.getElementsByClassName("SUN");
+      // console.log(result2[0].textContent);
+      // const spans = document.getElementsByTagName("span");
+      // console.log(spans[0].textContent, spans[1].textContent);
+      // const fname = document.getElementsByName("first");
+      // console.log(fname[0].textContent);
+      // const s = document.querySelector("#container #sun");
+      // console.log(s);
+      // const ss = document.querySelectorAll("div, span ,.SUN");
+      // console.log(ss);
+    </script>
+  </body>
+</html>
