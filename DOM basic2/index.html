@@ -2,7 +2,166 @@
 <html>
   <head>
     <title>Document</title>
+    <script>
+      // document.addEventListener("DOMContentLoaded", () => {
+      //   // console.log("로딩");
+
+      //   //       const sss = document.querySelector(".sunmoon");
+      //   //       sss.textContent = "선문대학교";
+      //   //       // console.log(sss.className);
+      //   //       console.log(sss.classList);
+      //   // const eleImage = document.querySelector(".coverImg");
+      //   // console.log(eleImage);
+      //   // eleImage.setAttribute(
+      //   //   "src",
+      //   //   "https://api.lorem.space/image/album?w=150&h=150"
+      //   // );
+      //   // const attr = eleImage.getAttribute("src");
+      //   // console.log(`src 속성의 값은 ${attr}`);
+
+      //   // const covers = document.querySelectorAll(".cover");
+      //   // console.log(covers);
+
+      //   // //const arr = ["a", "b", "c", "d"];
+      //   // covers.forEach((cover, idx) => {
+      //   //   console.log(cover, idx);
+      //   //   const width = (idx + 1) * 75;
+      //   //   const src = `https://placekitten.com/${width}/20`;
+      //   //   cover.setAttribute("src", src + idx);
+      //   //   console.log();
+      //   // });
+      // });
+    </script>
+
+    <script>
+      // document.addEventListener("DOMContentLoaded", () => {
+      //   // const newH1 = document.createElement("h1");
+      //   // const newH1_2 = document.createElement("h1");
+
+      //   // console.log(newH1);
+      //   // newH1.textContent = "새로만든 h1입니다";
+      //   // newH1_2.textContent = "새로만든 h1입니다";
+
+      //   // document.body.appendChild(newH1);
+      //   // document.body.appendChild(newH1_2);
+
+      //   // const divTwo = document.querySelector("#two");
+      //   // console.log(divTwo);
+      //   // divTwo.appendChild(newH1);
+
+      //   // const divOne = document.querySelector("#one");
+      //   // console.log(divOne);
+      //   // divOne.appendChild(newH1_2);
+
+      //   // const newH1 = document.createElement("h1");
+
+      //   // console.log(newH1);
+      //   // newH1.textContent = "새로만든 h1입니다";
+      //   // document.body.appendChild(newH1);
+
+      //   // const divTwo = document.querySelector("#two");
+      //   // console.log(divTwo);
+      //   // divTwo.appendChild(newH1);
+
+      //   // const divOne = document.querySelector("#one");
+      //   // const copy = newH1.cloneNode(newH1);
+      //   // console.log(divOne);
+      //   // divOne.appendChild(copy);
+      // });
+    </script>
+
+    <script>
+      // document.addEventListener("DOMContentLoaded", () => {
+      //   const deletDiv = document.querySelector("#two");
+      //   console.log(deletDiv);
+
+      //   const parent = deletDiv.parentNode;
+      //   console.log(parent);
+
+      //   parent.removeChild(deletDiv);
+      // });
+
+      // document.addEventListener("DOMContentLoaded", () => {
+      //   const deletDiv = document.querySelector(".aaa");
+      //   console.log(deletDiv);
+
+      //   deletDiv.forEach(() => {
+      //     const parent = deletDiv.parentNode;
+      //     console.log(parent);
+
+      //   });
+
+      //   parent.removeChild(deletDiv);
+      // });
+    </script>
     <style>
+      /* .target {
+        border: 1px solid gray;
+        border-radius: 2px;
+        display: inline;
+        background-color: aliceblue;
+        font-size: 13px;
+        padding: 2px;
+      } */
+    </style>
+    <script>
+      // document.addEventListener("DOMContentLoaded", () => {
+      //   const one = document.querySelector("#one");
+      //   const two = document.querySelector("#two");
+      //   const three = document.querySelector("#three");
+
+      //   const 원전용콜백 = () => {
+      //     debug.textContent = `원 클릭 되었습니다`;
+      //   };
+
+      //   원.addEventListener("click", 원전용콜백);
+      //   투.addEventListener("click", 원전용콜백);
+      //   쓰리.addEventListener("click", 원전용콜백);
+
+      //   one.addEventListener("click", () => {
+      //     console.log("one 클릭");
+      //     debug.textContent = `원 클릭 되었습니다`;
+      //   });
+
+      //   two.addEventListener("click", () => {
+      //     console.log("two 클릭");
+      //     debug.textContent = `투 클릭 되었습니다`;
+      //   });
+
+      //   three.addEventListener("click", () => {
+      //     console.log("three 클릭");
+      //     debug.textContent = `쓰리 클릭 되었습니다`;
+      //   });
+
+      //   원.removeEventListener("click", () => {
+      //     debug.textContent = `원 클릭 되었습니다`;
+      //   });
+      // });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const click = document.querySelector("#target");
+        let countnum = 0;
+        click.addEventListener("click", () => {
+          const clickCount = document.querySelector("#count");
+          clickCount.textContent = `${countnum++}`;
+        });
+
+        const btnConnect = document.querySelector(".connect");
+        const btnDisConnect = document.querySelector(".disconnect");
+        const stateMessage = document.querySelector("#state");
+
+        btnConnect.addEventListener("click", () => {
+          stateMessage.textContent = "연결됨 O";
+        });
+
+        btnDisConnect.addEventListener("click", () => {
+          stateMessage.textContent = "연결됨 X";
+        });
+      });
+    </script>
+    <!-- <style>
       .sunmoon {
         color: red;
       }
@@ -27,38 +186,62 @@
       #container .SUN {
         border: 3px solid red;
       }
-    </style>
+    </style> -->
   </head>
   <body>
-    <div class="sunmoon">DIV 태그 입니다.</div>
-    <div id="container">
+    <!-- <div class="sunmoon btn btn-lg btn-red">DIV 태그 입니다.</div> -->
+
+    <div id="target">클릭</div>
+    <div>클릭횟수 : <span id="count">0</span></div>
+    <button class="connect">이벤트 연결</button>
+    <button class="disconnect">이벤트 삭제</button>
+    <p>이벤트 연결 상태 : <span id="state">해제됨</span></p>
+
+    <!-- <div class="container">
+      <div id="one" class="divELE">첫번째</div>
+      <div id="two" class="divELE">두번째</div>
+      <div id="three" class="divELE">세번째</div>
+      <div id="debug"></div>
+    </div> -->
+
+    <!-- <img src="https://api.lorem.space/image/album?w=150&h=150" alt="" />
+    <img class="coverImg" src="" alt="" /> -->
+
+    <!-- <img src="https://placekitten.com/200/300" alt="" class="cover" />
+    <img src="https://placekitten.com/200/300" alt="" class="cover" />
+    <img src="https://placekitten.com/200/300" alt="" class="cover" />
+    <img src="https://placekitten.com/200/300" alt="" class="cover" />
+    <img src="https://placekitten.com/200/300" alt="" class="cover" /> -->
+
+    <!-- <div id="container">
       <span name="first">안</span>
       <span id="sun" name="second">녕</span>
       <span id="moon">하</span>
       <span class="SUN">세</span>
       <span>요</span>
-    </div>
+    </div> -->
     <script>
-      const sun = document.querySelector("#sun");
-      //sun.addEventListener();
+      // document.body.textContent += "<div>선문대학교</div>";
+      // document.body.innerHTML += "<div>선문대학교</div>";
 
-      let cl1 = 0;
-      let cl2 = 0;
-      let cl3 = 0;
-      let cl4 = 0;
-
-      document.addEventListener("click", () => {
-        console.log(`${cl1++} 클릭`);
-      });
-      document.addEventListener("dblclick", () => {
-        console.log(`${cl2++} 더블클릭`);
-      });
-      document.addEventListener("mousedown", () => {
-        console.log(`${cl3++} 누름`);
-      });
-      document.addEventListener("mouseup", () => {
-        console.log(`${cl4++} 땜`);
-      });
+      // const sun = document.querySelector("#sun");
+      // //sun.addEventListener();
+      // let cl1 = 0;
+      // let cl2 = 0;
+      // let cl3 = 0;
+      // let cl4 = 0;
+      // document.addEventListener("click", () => {
+      //   console.log(`${cl1++} 클릭`);
+      // });
+      // document.addEventListener("dblclick", () => {
+      //   console.log(`${cl2++} 더블클릭`);
+      // });
+      // document.addEventListener("mousedown", () => {
+      //   console.log(`${cl3++} 누름`);
+      // });
+      // document.addEventListener("mouseup", () => {
+      //   console.log(`${cl4++} 땜`);
+      // });
 
       // const div = document.querySelector(".sunmoon");
       // console.log(div);

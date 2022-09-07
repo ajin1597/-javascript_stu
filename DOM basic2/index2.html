@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #avatar {
+        background-color: red;
+        position: absolute;
+        top: 1px;
+        left: 0px;
+      }
+    </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const cat = document.querySelector("#avatar");
+
+        cat.addEventListener("click", () => {
+          console.log("잘 클릭 됩니다");
+        });
+
+        let moveX = 0;
+        let moveY = 0;
+
+        document.addEventListener("keydown", (nowEvent) => {
+          console.log("키가 눌러짐");
+          console.log(nowEvent.key);
+
+          switch (nowEvent.key) {
+            case "ArrowUp":
+              moveX -= 20;
+              cat.style.top = `${moveX}px`;
+              break;
+            case "ArrowLeft":
+              moveY -= 20;
+              cat.style.left = `${moveY}px`;
+              break;
+            case "ArrowRight":
+              moveY += 20;
+              cat.style.left = `${moveY}px`;
+              break;
+            case "ArrowDown":
+              moveX += 20;
+              cat.style.top = `${moveX}px`;
+              break;
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="avatar">🤔</div>
+  </body>
+</html>
