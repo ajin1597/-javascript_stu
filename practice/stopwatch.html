@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const stButton = document.querySelector("#start-button");
+      const endButton = document.querySelector("#end-button");
+      const deleteButton = document.querySelector("#delete-button");
+
+      let timeCount = 0;
+
+      stButton.addEventListener("click", () => {
+        timeCount = setInterval(() => {});
+      });
+
+      endButton.addEventListener("click", () => {});
+    });
+  </script>
+
+  <body>
+    <span>00:00:00</span>
+    <button id="start-button">start</button>
+    <button id="end-button">stop</button>
+    <button id="delete-button">delete</button>
+    <div>
+      <ul>
+        <li>
+          <a href="./home.html"> 돌아가기 </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

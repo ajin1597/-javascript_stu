@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <script>
+  // document.addEventListener("DOMContentLoaded", () =>{
+
+  //   const numUnit = document.querySelector(".cNum");
+  //   const inputNum = document.querySelector("input");
+  //   const changeButton = document.querySelector("button");
+  //   const pResult = document.querySelector(".result");
+
+  //   changeButton.addEventListener("click", () => {
+
+  //       const inch = Number(inputNum.value);
+  //       if(Number.isNaN(inch)) {
+  //         pResult.textContent = "변환 할 숫자를 입력해주세요";
+  //         return
+  //       }
+
+  //       const cm = inch * 2.54;
+  //       pResult.textContent = `${cm} cm`
+
+  //   });
+
+  // });
+</script>
+
+  <body>
+    <!-- <p class="cNum">inch -> cm</p>
+    <input type="text"></input>
+    <br>
+    <br>
+    <button>Change</button>
+    <p class="result"></p> -->
+    <div>
+      <ul>
+        <li>
+          <a href="./home.html"> 돌아가기 </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", ()=>{
+
+      const inputNum = document.querySelector("input");
+      const selectUnit = document.querySelector("select");
+      const span = document.querySelector("span");
+      
+      let num;
+      let resultNum = 10;
+
+      const result = () => {
+        span.textContent = (num * resultNum).toFixed(2);
+      }
+
+      selectUnit.addEventListener("change", (event) => {
+        const option = event.currentTarget.options;
+        console.log(event.currentTarget.options)
+        console.log(event.currentTarget.option)
+        const index = event.currentTarget.options.selectedIndex;
+        console.log(index)
+        resultNum = Number(option[index].value);
+        result();
+      });
+
+      inputNum.addEventListener("keyup", (event) => {
+        num = Number(event.currentTarget.value);
+        result();
+      });
+    });
+  </script>
+
+  <body>
+    <input type="text"> cm = </input>
+    <span></span>
+    <select>
+      <option value="10">mm</option>
+      <option value="0.01">m</option>
+      <option value="0.393701">inch</option>
+    </select>
+
+  </body>
+</html>
